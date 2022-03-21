@@ -17,7 +17,7 @@ LCDC_DisableLCD::
     jr nz, .waitForVblank
     
     ld a, [W_ShadowREG_LCDC]
-    and $7F
+    and $FE			; fix
     ld [REG_LCDC], a
     
     ld a, [$FF93]
@@ -30,6 +30,6 @@ LCDC_DisableLCD::
 ;avoid hardware damage.
 LCDC_EnableLCD::
     ld a, [REG_LCDC]
-    or $80
+    or $01			; fix
     ld [REG_LCDC], a
     ret

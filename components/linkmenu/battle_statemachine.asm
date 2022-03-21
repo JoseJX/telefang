@@ -59,7 +59,7 @@ LinkMenu_StateBattleDrawScreen::
 	ld e, $BC
 	ld a, 0
 	call Banked_RLEDecompressAttribsTMAP0
-	ld a, $C3
+	ld a, $C3		; no fix
 	ld [W_ShadowREG_LCDC], a
 	xor a
 	ld [W_ShadowREG_SCX], a

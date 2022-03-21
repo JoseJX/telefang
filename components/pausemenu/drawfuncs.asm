@@ -217,7 +217,7 @@ PauseMenu_ADVICE_CallsMenuDrawDenjuuNickname::
 
 .wfb
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfb
 
     ld a, d
@@ -268,7 +268,7 @@ PauseMenu_ADVICE_CallsMenuDrawDenjuuNickname::
 
 .wfbB
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfbB
 
     ld a, [$8D40]
@@ -288,7 +288,7 @@ PauseMenu_ADVICE_CallsMenuDrawDenjuuNickname::
 
 .wfbC
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfbC
 
     ld a, [$8D50]
@@ -318,7 +318,7 @@ PauseMenu_ADVICE_CallsMenuBorderPreserver::
 
 .wfb
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfb
 
     ld [hl], d
@@ -332,7 +332,7 @@ PauseMenu_ADVICE_CallsMenuNameBorder::
 
 .wfbA
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfbA
 
     ld a, [hl]
@@ -349,7 +349,7 @@ PauseMenu_ADVICE_CallsMenuNameBorder::
 
 .wfbB
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfbB
 
     ld a, [hl]

@@ -246,7 +246,7 @@ Status_LoadPhoneDigits_NowWithSGBSupport::
 
 .wfb
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfb
     ld a, [hli]
     ld [de], a
@@ -275,7 +275,7 @@ Status_ADVICE_ExpandNumericalTiles::
 
 .waitForBlankingNormal
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .waitForBlankingNormal
 
     ld a, [de]
@@ -293,7 +293,7 @@ Status_ADVICE_ExpandNumericalTiles::
 
 .waitForBlankingInverted
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .waitForBlankingInverted
 
     ld a, [de]
@@ -312,7 +312,7 @@ Status_ADVICE_ExpandNumericalTiles::
 
 .waitForBlankingLightBg
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .waitForBlankingLightBg
 
     ld a, $FF

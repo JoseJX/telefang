@@ -67,7 +67,7 @@ Status_DrawTopOfDigits::
     
 .wfbLoop
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfbLoop
     
     ld a, [de]
@@ -91,7 +91,7 @@ Status_DrawBottomOfDigits::
     
 .wfbLoop
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfbLoop
     
     ld a, [de]

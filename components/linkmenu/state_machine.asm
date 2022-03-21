@@ -64,7 +64,7 @@ LinkMenu_StateFadeOutFromTitlemenu::
 	or a
 	ret z
 	call Status_ExpandNumericalTiles
-	ld a, $C3
+	ld a, $C3		; no fix
 	ld [W_ShadowREG_LCDC], a
 	xor a
 	ld [W_ShadowREG_SCX], a
@@ -98,7 +98,7 @@ LinkMenu_StateDrawConnectionConfirmationScreen::
 	ld e, $61
 	xor a
 	call Banked_RLEDecompressAttribsTMAP0
-	ld a, $C3
+	ld a, $C3		; no fix
 	ld [W_ShadowREG_LCDC], a
 	xor a
 	ld [W_ShadowREG_SCX], a

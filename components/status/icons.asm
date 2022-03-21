@@ -99,7 +99,7 @@ Status_LoadDenjuuEvolutionIndicatorOffloadZukan_NowWithSGBSupport_DrawLoop::
 
 .wfb
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfb
     ld a, [hli]
     ld [de], a

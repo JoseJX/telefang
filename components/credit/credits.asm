@@ -158,7 +158,7 @@ Credits_DrawCharacter::
 
 .jpA
 	ldh a, [REG_STAT]
-	and a, 2
+	and a, $40		; fix
 	jr nz, .jpA
 	ld [hl], b
 	ret
@@ -257,7 +257,7 @@ Credits_ADVICE_Newline::
 
 .jpA
 	ldh a, [REG_STAT]
-	and a, 2
+	and a, $40		; fix
 	jr nz, .jpA
 	ld [hl], c
 	ld a, c
@@ -307,7 +307,7 @@ Credits_ADVICE_ClearFirstTile::
 
 .jpA
 	ldh a, [REG_STAT]
-	and a, 2
+	and a, $40		; fix
 	jr nz, .jpA
 	xor a
 	ld [hl], a

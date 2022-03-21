@@ -66,7 +66,7 @@ AttractMode_ADVICE_MapUndertiles::
 
 .wfbA
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfbA
 	ld a, b
 	ld [hli], a
@@ -79,7 +79,7 @@ AttractMode_ADVICE_MapUndertiles::
 
 .wfbB
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfbB
 	ld a, b
 	ld [hli], a
@@ -202,7 +202,7 @@ AttractMode_ADVICE_LoadSGBFilesScene1_spriteChange::
 
 .wfbA
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfbA
 
 	ld a, b

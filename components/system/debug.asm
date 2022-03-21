@@ -141,7 +141,7 @@ Debug_ADVICE_DrawDigits::
 
 .wfbA
 	ldh a, [REG_STAT]
-	and 2
+	and $40		 ; fix
 	jr nz, .wfbA
 
 	ld a, [hli]
@@ -170,7 +170,7 @@ Debug_ADVICE_DrawDigits::
 
 .wfbB
 	ldh a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfbB
 
 	ld a, [hli]

@@ -72,12 +72,12 @@ Main::
 	ld a, 1
 	ld [$C430], a
 	call LCDC_ClearDMGPaletteShadow
-	ld a, $83
+	ld a, $C1		; fix
 	ld [W_ShadowREG_LCDC], a
 	ld [REG_LCDC], a ;Enable LCD display, OBJ, and BG layers.
 	ei
 	call SerIO_ResetConnection
-	ld a, $40
+	ld a, $02		; fix
 	ld [REG_STAT], a
 	xor a
 	ld [REG_IF], a

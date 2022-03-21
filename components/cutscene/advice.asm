@@ -22,7 +22,7 @@ Cutscene_ADVICE_TileLightColourClear::
 
 .wfb
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfb
 
 	ld c, [hl]
@@ -130,7 +130,7 @@ Cutscene_ADVICE_LoadSGBFiles_AntennaTree::
 
 .wfb
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfb
 	ld e, [hl]
 	xor a
@@ -166,7 +166,7 @@ Cutscene_ADVICE_LoadSGBFiles_OneOfMySoldiers::
 
 .wfb
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfb
 	ld a, d
 	ld [hli], a

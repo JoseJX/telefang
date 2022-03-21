@@ -210,7 +210,7 @@ MainScript_ADVICE_ExpandGlyphWithCurrentTextStyle::
 	
 .mode3
 	db $FA, $41, $FF ;ld a, [REG_STAT] - the long way
-	and 2
+	and $40		; fix
 	jr nz, .mode3
 	
 	ld a, $FF
@@ -221,7 +221,7 @@ MainScript_ADVICE_ExpandGlyphWithCurrentTextStyle::
 	
 .mode0
 	db $FA, $41, $FF ;ld a, [REG_STAT] - the long way
-	and 2
+	and $40		; fix
 	jr nz, .mode0
 	
 	ld a, b
@@ -231,7 +231,7 @@ MainScript_ADVICE_ExpandGlyphWithCurrentTextStyle::
 	
 .mode1
 	db $FA, $41, $FF ;ld a, [REG_STAT] - the long way
-	and 2
+	and $40		; fix
 	jr nz, .mode1
 	
 	ld a, b
@@ -247,7 +247,7 @@ MainScript_ADVICE_ExpandGlyphWithCurrentTextStyle::
 	
 .mode2Loop
 	db $FA, $41, $FF ;ld a, [REG_STAT] - the long way
-	and 2
+	and $40		; fix
 	jr nz, .mode2Loop
 	
 	ld a, b
@@ -390,7 +390,7 @@ MainScript_ADVICE_ExpandNarrowGlyphWithCurrentTextStyle::
 	
 .mode3
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .mode3
 	
 	ld a, $FF
@@ -401,7 +401,7 @@ MainScript_ADVICE_ExpandNarrowGlyphWithCurrentTextStyle::
 	
 .mode0
 	ld a, [REG_STAT]
-	and 2
+	and $40	 	; fix
 	jr nz, .mode0
 	
 	ld a, b
@@ -411,7 +411,7 @@ MainScript_ADVICE_ExpandNarrowGlyphWithCurrentTextStyle::
 	
 .mode1
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .mode1
 	
 	ld a, b
@@ -427,7 +427,7 @@ MainScript_ADVICE_ExpandNarrowGlyphWithCurrentTextStyle::
 	
 .mode2Loop
 	ld a, [REG_STAT]
-	and 2
+	and $40	 	; fix
 	jr nz, .mode2Loop
 	
 	ld a, b

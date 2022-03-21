@@ -19,7 +19,7 @@ LinkVictory_ADVICE_TileLowByteBlanketFill::
 
 .wfb
 	ldh a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfb
 	ld a, c
 	ld [hli], a

@@ -58,7 +58,7 @@ Zukan_ADVICE_MapArrow::
 
 .wfb
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfb
 	ld [hl], b
 	ret
@@ -335,7 +335,7 @@ Zukan_ADVICE_TileLightColourReverse::
 
 .wfb
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfb
     ld a, [hli]
     ld c, a
@@ -358,7 +358,7 @@ Zukan_ADVICE_TileLowByteBlanketFill::
 
 .wfb
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfb
     ld a, c
     ld [hli], a
@@ -448,7 +448,7 @@ Zukan_ADVICE_ClearMessageForSGB_Direct::
 
 .wfb
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfb
     ld a, e
     ld [hli], a

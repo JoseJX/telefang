@@ -114,7 +114,7 @@ TitleMenu_StatePlayMenuBGM::
     
 ; State 03 07
 TitleMenu_StateAnimateMenuHalvesIn::
-    ld a, $E3
+    ld a, $C7		 	; fix
     ld [W_ShadowREG_LCDC], a
     
     xor a
@@ -320,7 +320,7 @@ TitleMenu_StateFadeToOverworldContinue::
     or a
     ret z
     
-    ld a, $C3
+    ld a, $C3		; no fix
     ld [W_ShadowREG_LCDC], a
     
     xor a
@@ -481,7 +481,7 @@ TitleMenu_StateFadeToOverworldNewGame::
     or a
     ret z
     
-    ld a, $C3
+    ld a, $C3		; no fix
     ld [W_ShadowREG_LCDC], a
     
     xor a
@@ -687,7 +687,7 @@ TitleMenu_StateInitNickname::
     call PauseMenu_CGBLoadPalettes
     xor a
     ld [W_CGBPaletteStagedBGP], a
-    ld a, $E3
+    ld a, $C7		; fix
     ld [W_ShadowREG_LCDC], a
     ld a, $58
     ld [W_ShadowREG_WX], a
@@ -792,7 +792,7 @@ TitleMenu_StateReturnToOverworld::
     or a
     ret z
     
-    ld a, $C3
+    ld a, $C3		; no fix
     ld [W_ShadowREG_LCDC], a
     xor a
     ld [W_ShadowREG_SCX], a

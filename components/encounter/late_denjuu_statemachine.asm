@@ -259,10 +259,10 @@ LateDenjuu_OverlayBattleScreen::
 	ld a, 0
 	ld [W_ShadowREG_WY], a
 	ld a, [W_ShadowREG_LCDC]
-	set 5, a
+	set 2, a		; fix
 	ld [W_ShadowREG_LCDC], a
 	ld a, [W_ShadowREG_LCDC]
-	set 6, a
+	set 1, a		; fix
 	ld [W_ShadowREG_LCDC], a
 	ld a, 1
 	ld [W_ShadowREG_HBlankSecondMode], a

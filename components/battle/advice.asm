@@ -163,7 +163,7 @@ Battle_ADVICE_AttackWindowCorrectForSGBOnOpen::
 
 .wfbA
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfbA
 
     ld [hl], c
@@ -186,7 +186,7 @@ Battle_ADVICE_AttackWindowCorrectForSGBOnOpen::
 
 .wfbB
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfbB
 
     ld a, e
@@ -231,7 +231,7 @@ Battle_ADVICE_AttackWindowCorrectForSGBOnClose::
 
 .wfb
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfb
 
     ld a, e
@@ -343,7 +343,7 @@ Battle_ADVICE_ArrivedMessageFix_CopyTiles::
 
 .wfb
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfb
     ld a, [bc]
     ld [hli], a
@@ -364,7 +364,7 @@ Battle_ADVICE_ArrivedMessageFix_FillBySequence::
 
 .wfb
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfb
     ld a, c
     ld [hli], a
@@ -385,7 +385,7 @@ Battle_ADVICE_ArrivedMessageFix_FFFill::
 
 .wfb
     ldh a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfb
     ld a, c
     ld [hli], a

@@ -250,13 +250,13 @@ TitleLogo_StateGameReset::
     ldh  [$FF56], a
     call $0439
     call LCDC_ClearDMGPaletteShadow
-    ld a, $C3
+    ld a, $C3		; no fix
     ld [W_ShadowREG_LCDC], a
-    ldh [$FF40], a
+    ldh [REG_LCDC], a	; fix
     ei   
     call SerIO_ResetConnection
-    ld a,$40
-    ldh [$FF41], a
+    ld a,$02		; fix
+    ldh [REG_STAT], a	; fix
     xor a
     ldh [$FF0F], a
     ld a, $B

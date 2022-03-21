@@ -114,7 +114,7 @@ SGB_SendPacketsWithVRAM_externalEntry::
     dec c
     jr nz, .drawLine
     
-    ld a, $81
+    ld a, $81		; no fix
     ld [REG_LCDC], a
     
     ld bc, 5

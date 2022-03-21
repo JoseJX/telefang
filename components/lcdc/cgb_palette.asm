@@ -380,7 +380,7 @@ copyCGBPalette:
 
 .vramUnlock
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .vramUnlock
 	ld a, [hli]
 	ld [de], a

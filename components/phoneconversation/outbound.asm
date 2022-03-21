@@ -269,7 +269,7 @@ PhoneConversation_DrawOutboundCallScreen::
     
 SECTION "Phone Conversation Outbound 3", ROMX[$7E6E], BANK[$4]
 PhoneConversation_OutboundConfigureScreen::
-    ld a, $C3
+    ld a, $C3		; no fix
     ld [W_ShadowREG_LCDC], a
     xor a
     ld [W_ShadowREG_SCX], a

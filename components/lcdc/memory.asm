@@ -60,7 +60,7 @@ YetAnotherWFB::
 	
 .loop
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .loop
 	pop af
 	ret
@@ -71,7 +71,7 @@ vmempoke::
 	
 .wfb
 	ld a, [REG_STAT]
-	and 2
+	and $40		 ; fix
 	jr nz, .wfb
 	pop af
 	ld [hli], a
@@ -135,7 +135,7 @@ ClearGBCTileMap1::
 SECTION "Wait For Blanking, Again", ROM0[$1F79]
 WaitForBlanking::
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, WaitForBlanking
     
     ret

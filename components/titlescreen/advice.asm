@@ -44,7 +44,7 @@ TitleScreen_ADVICE_RecolorVersionBand::
     
 .wfbLoopNewTile
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfbLoopNewTile
     
     ld a, $FF
@@ -57,7 +57,7 @@ TitleScreen_ADVICE_RecolorVersionBand::
     
 .wfbLoopNewTile2
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .wfbLoopNewTile2
     
     ld a, $FF
@@ -79,7 +79,7 @@ TitleScreen_ADVICE_InvertVersionBand::
 
 .wfbA
 	ld a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfbA
 
 	xor a
@@ -99,7 +99,7 @@ TitleScreen_ADVICE_InvertVersionBand::
 
 .wfbB
 	ld a, [REG_STAT]
-	and 2
+	and $40		 ; fix
 	jr nz, .wfbB
 
 	ld a, [hl]

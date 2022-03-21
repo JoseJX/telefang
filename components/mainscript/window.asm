@@ -47,7 +47,7 @@ MainScript_ClearWindowTiles::
 
 .dcz_blanking
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .dcz_blanking
     
     xor a
@@ -65,7 +65,7 @@ MainScript_ClearWindowTiles::
     
 .dct_blanking
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .dct_blanking
     
     xor a
@@ -84,7 +84,7 @@ MainScript_ClearWindowTiles::
     
 .dcth_blanking
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .dcth_blanking
     
     ld a, $FF
@@ -110,7 +110,7 @@ MainScript_ADVICE_ClearWindowTiles_DrawColorOneMaybe::
     
 .dct_blanking
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .dct_blanking
     
     ld a, $FF
@@ -222,7 +222,7 @@ MainScript_DrawWindowBorderLine:
     
 .waitForBlanking
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .waitForBlanking
     
     ld a, [de]
@@ -282,7 +282,7 @@ MainScript_DrawWindowBorderAttribLine::
     
 .waitForBlanking
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .waitForBlanking
     
     ld a, [W_MainScript_WindowBorderAttribs]
@@ -326,7 +326,7 @@ MainScript_LoadWindowBorderTileset::
     
 .c0_blanking
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .c0_blanking
     
     xor a
@@ -346,7 +346,7 @@ MainScript_LoadWindowBorderTileset::
     
 .c3_blanking
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .c3_blanking
     
     ld a, $FF
@@ -929,7 +929,7 @@ MainScript_ADVICE_LoadWindowBorderTilesetSGBAdjusted_Common::
     
 .c1_blanking
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .c1_blanking
 
     ld a, $FF
@@ -960,7 +960,7 @@ MainScript_ADVICE_LoadWindowBorderTilesetSGBAdjusted_Common::
 
 .c0_blanking
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .c0_blanking
 
     xor a
@@ -977,7 +977,7 @@ MainScript_ADVICE_LoadWindowBorderTilesetSGBAdjusted_Common::
 
 .c3_blanking
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .c3_blanking
 
     ld a, $FF

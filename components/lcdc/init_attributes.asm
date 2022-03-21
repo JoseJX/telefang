@@ -50,7 +50,7 @@ LCDC_InitAttributesLine::
     
 .singleByteWait
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .singleByteWait
     
     ld a, d
@@ -74,7 +74,7 @@ LCDC_InitAttributesLine::
     
 .doubleByteWait
     ld a, [REG_STAT]
-    and 2
+    and $40		; fix
     jr nz, .doubleByteWait
     
     ld a, d

@@ -75,7 +75,7 @@ Summon_ADVICE_LoadSGBFiles_SkipSetup::
 
 .wfb
 	ldh a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfb
 
 	ld a, c
@@ -200,7 +200,7 @@ Summon_ADVICE_ClearDenjuuIndicators::
 
 .wfb
 	ldh a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfb
 
 	ld a, c

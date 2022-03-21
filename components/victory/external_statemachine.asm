@@ -29,11 +29,11 @@ Victory_ExStateOverworldReturn::
     ld [W_ShadowREG_WX], a
     
     ld a, [W_ShadowREG_LCDC]
-    res 5, a
+    res 2, a		; fix
     ld [W_ShadowREG_LCDC], a
     
     ld a, [W_ShadowREG_LCDC]
-    res 6, a
+    res 1, a		; fix
     ld [W_ShadowREG_LCDC], a
     
     ld a, 0

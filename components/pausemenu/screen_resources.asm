@@ -24,7 +24,7 @@ PauseMenu_LoadPhoneControlHint::
     
 SECTION "Pause Menu Screen Resource Utils 2", ROMX[$7E58], BANK[$4]
 PauseMenu_ConfigureScreen::
-    ld a, $E3
+    ld a, $C7			; fix
     ld [W_ShadowREG_LCDC], a
     
     ld a, $58

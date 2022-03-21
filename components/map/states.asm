@@ -278,7 +278,7 @@ Map_MapScreenTiles::
 
 .waitforblank
 	ldh a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .waitforblank
 
 	ld a, 6

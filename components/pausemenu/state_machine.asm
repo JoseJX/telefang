@@ -93,7 +93,7 @@ PauseMenu_StateLoadDMGCompatibility::
 
 ;State 0C 04
 PauseMenu_StateAnimateMenuHalvesIn::
-    ld a, $E3
+    ld a, $C7		; fix
     ld [W_ShadowREG_LCDC], a
     
     xor a

@@ -74,7 +74,7 @@ LCDCIRQ::
 	ld a, 0
 	ld [REG_LYC], a
 	ld [W_ShadowREG_LYC], a
-	ld a, %10000011 ; Enable LCD, BG, and OBJ (and no others)
+	ld a, %11000001 ; fix - Enable LCD, BG, and OBJ (and no others)
 	ld [REG_LCDC], a
 
 .ret_pop3

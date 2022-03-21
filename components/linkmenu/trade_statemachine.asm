@@ -64,7 +64,7 @@ LinkMenu_StateTradeDrawScreen::
 	ld [W_ShadowREG_WX], a
 	ld [W_ShadowREG_WY], a
 	call Banked_RLEDecompressAttribsTMAP0
-	ld a, $C3
+	ld a, $C3		; no fix
 	ld [W_ShadowREG_LCDC], a
 	call LinkMenu_ADVICE_LoadSGBFilesTrade
 	call Status_ExpandNumericalTiles

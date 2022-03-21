@@ -157,7 +157,7 @@ TitleMenu_ADVICE_Nickname_RedrawTiles::
 
 .wfb
 	ldh a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfb
 
 	ld a, [hli]
@@ -182,7 +182,7 @@ TitleMenu_ADVICE_Nickname_RemapBlankTiles::
 
 .wfb
 	ldh a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfb
 
 	ld a, [hl]
@@ -213,7 +213,7 @@ TitleMenu_ADVICE_Nickname_RemapTilesToBlank::
 
 .wfb
 	ldh a, [REG_STAT]
-	and 2
+	and $40		; fix
 	jr nz, .wfb
 	
 	ld a, c
